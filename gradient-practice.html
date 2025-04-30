@@ -12,28 +12,42 @@
             background-attachment: fixed; /* Fix the background image */
             background-repeat: no-repeat; /* Prevent repeating the image */
         }
-
+        div { width: auto; height: auto; }
+        div h1 { background: linear-gradient(0deg, #46bab8, #d44b4b);}
+        div p { background: linear-gradient(72deg, #d1551c, #cd8d18);}
+        #pickles { background: linear-gradient(275deg, #69cd18, #4b59c3);}
+        #greeenfng { background: linear-gradient(60deg, #cd1818, #894bc3);}
+        #circle {height: 150px; width: 200px; background-image: radial-gradient(circle, #848 #943);}
+        div {-ms-transform: rotate(180deg); -webkit-transform: rotate(180deg);}
+        #greeenfng {transform: translate(100px, 200px);}
+        #banana {transform: scale(.5, 1.5);}
+        #apple {transform: skew(20deg);}
+        #pineapple {transform: rotateX('30deg') rotateY('70deg');}
+        #wombat {translate: 3d(100px, 200px, 300px); transform: scale3d(300px, 200px, 300px);}
     </style>
 </head>
 <body>
     <div style="background: linear-gradient(to right, #dc2424, #4a569d);">
-        <h1>Gradient Practice</h1>
+        <h1 id="wombat">Practice</h1>
         <p>This page demonstrates the use of a gradient background.</p>
         <p>Enjoy the beautiful gradient!</p>
         <p>JAMAL</p>
-    </div style="background: linear-gradient(to left, #dc2424, #4a569d);">
-    JAMAL
-    <div>
-        <p>JAMAL</p>
+    </div>
+    <div id="greeenfng">
+        iuwfuihfrgueghrfbg
     </div>
     <div>
+        <p id="pickles">JAMAL</p>
+    </div>
+    <div id="banana">
         <p>JAMAL</p>
     </div>
-    <div>
+    <div id="apple">
         <p>JAMAL</p>
     </div>
-    <div>
+    <div id="pineapple">
         <p>JAMAL</p>
     </div>
+    <div id="circle"></div>
 </body>
 </html>
