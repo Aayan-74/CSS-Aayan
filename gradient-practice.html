@@ -24,6 +24,87 @@
         #apple {transform: skew(20deg);}
         #pineapple {transform: rotateX('30deg') rotateY('70deg');}
         #wombat {translate: 3d(100px, 200px, 300px); transform: scale3d(300px, 200px, 300px);}
+        #jjj {width: 100px; height: 100px; background-color: #f00; transition: 2s; border-radius: 20%;}
+        #jjj:hover {width: 2000rem; height: 2000rem; background-color: #0f0; transform: rotate(36000000000000000000000000000000000deg);}
+        #jjf { color: #cc2a2a; font-size: 25px; text-align: center; }
+        #jjf:hover { color: #2a2acc; font-size: 50px; text-align: center; transition-duration: 2s; transition-delay: 1s; }
+        #nfg {width: 100px;
+height: 100px;
+background: red;
+position: relative;
+animation-name: mymove;
+animation-duration: 5s;
+transition: 5s;
+animation: mymove 5s infinite;
+animation-timing-function: linear;
+animation-fill-mode: forwards;
+animation-direction: alternate;
+animation-delay: 2s;
+justify-content: center;
+animation-iteration-count: infinite;
+animation-play-state: running;
+animation-fill-mode: forwards;
+}
+@keyframes mymove {
+    0% {background: #0f0; left: 0px; top: 0px;}
+    25% {background: red; left: 200px; top: 0px;}
+    50% {background: yellow; left: 200px; top: 200px;}
+    75% {background: #2a2acc; left: 0px; top: 200px;}
+    100% {background: #848; left: 0px; top: 0px;}
+    0% {background: brown; right: 0px; bottom: 0px;}
+}
+input[type=text] {
+  width: 100px;
+}
+input[type=text]:focus {
+  width: 250px;
+  height: 250px;
+}
+.spinner {
+  margin: 10px;
+  width: 180px;
+  height: 180px;
+}
+.spinner-dot {
+  stroke: #000;
+  stroke-width: 1;
+  fill: #000;
+}
+
+.spinner-border {
+  fill: transparent;
+  stroke-width: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.path {
+  stroke-dasharray: 170;
+  stroke-dashoffset: 20;
+}
+.spinner {
+  // ...
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinner-dot {
+  // ...
+  animation: skew 2s linear infinite alternate;
+}
+
+@keyframes skew {
+  from {
+    transform: skewX(10deg)
+  }
+  to {
+    transform: skewX(40deg)
+  }
+}
     </style>
 </head>
 <body>
@@ -49,5 +130,25 @@
         <p>JAMAL</p>
     </div>
     <div id="circle"></div>
+
+    <div id="jjj">
+    </div>
+    <h1 id="jjf">jewfefib</h1>
+    <div id="nfg"></div>
+    </div>
+    Search: <input type="text" name="search">
+    <svg class="spinner" viewBox="0 0 66 66" xmlns="https://www.w3.org/2000/svg"> <!-- 1 -->
+
+        <circle class="path spinner-border" cx="33" cy="33" r="31" stroke="url(#gradient)"></circle> <!-- 2 -->
+      
+        <linearGradient id="gradient"> <!-- 3 -->
+          <stop offset="50%" stop-color="#000" stop-opacity="1"></stop>
+          <stop offset="65%" stop-color="#000" stop-opacity=".5"></stop>
+          <stop offset="100%" stop-color="#000" stop-opacity="0"></stop>
+        </linearGradient>
+      
+        <circle class="path spinner-dot" cx="37" cy="3" r="2"></circle> <!-- 4 -->
+      
+      </svg>
 </body>
 </html>
