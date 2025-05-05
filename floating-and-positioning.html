@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backgrounds and Text</title>
+    <title>Floating and Positioning</title>
     <header id="header">
         <h1>Basketball History</h1>
         <p>Welcome to the Basketball History page!</p>
@@ -14,7 +14,7 @@
                 <a href="index.html" id="homey">Home</a>
                 <a href="aboutus.html">About Us</a>
                 <a href="contactus.html">Contact Us</a>
-                <li><a href="random.html">random</a></li>
+                <a href="random.html">random</a>
                 
             </li>
         </ul>
@@ -23,26 +23,33 @@
     <style>
         header {
             background-color: rgb(223, 167, 93); /* Header background color */
-            color: rgb(12, 10, 10); /* Header text color */
             padding: 20px; /* Padding around the header */
             text-align: center; /* Centered text in the header */
         }
         nav{
             list-style: none; /* Remove bullet points from the list */
-            padding: 0; /* Remove padding from the list */
-            background-color: #936d40; /* Header background color */
-            padding: 10px; /* Padding around the header */
+            margin: 0;
+            background-color: whitesmoke;
+            padding: 8px; /* Padding around the header */
             text-align: center; /* Centered text in the header */
+            resize: both; /* Allow resizing of the nav element */
+            overflow: auto; /* Enable scrolling if content overflows */
+            width: calc(100% - 16px);
         }
         nav li {
             display: inline; /* Display list items in a single line */
             margin: 0 15px; /* Space between list items */
+            float: left; /* Float the list items to the left */
+            display: block; /* Display list items as block elements */
+            
         }
         nav li:hover {transition: translateY(-20px) scale(1.1);}
         
         nav ul {
             list-style: none; /* Remove bullet points from the list */
             padding: 0; /* Remove padding from the list */
+            margin: 0px; /* Remove margin from the list */
+            list-style: none; /* Remove bullet points from the list */
         }
         nav ul li {
             display: inline; /* Display list items in a single line */
@@ -52,25 +59,27 @@
         }
         nav ul li a {
             text-decoration: none; /* Remove underline from links */
-            color: #fff; /* White color for links */
+            color: rgb(39, 35, 35); /* Black color for links */
+            padding: 5px;
+            margin: 4px;
+            border: solid black 2px; /* Border around links */
+            border-radius: 5px; /* Rounded corners for links */
+            color: #2A2A2A; /* Dark color for links */
         }
         nav ul li a:hover {
             text-decoration: underline; /* Underline links on hover */
             color: black; /* Change color on hover */
             background-color: #5ac88b; /* Change background color on hover */
         }
-        div.relative {position: relative; width: 500px; height: 300px; top: 30px; border: 3px solid #0d0e0b; opacity: 1;}
-        div.absolute {position: absolute; top: 50px; left: 50px; width: 146px; height: 146px; border: 3px solid #4a2593; opacity: 1;}
-    </style>
-    <style>
+        div.reelative {position: relative; width: 500px; height: 300px; top: 30px; border: 3px solid #0d0e0b; opacity: 1;}
+        div.absolutee {position: absolute; top: 50px; left: 50px; width: 146px; height: 146px; border: 3px solid #4a2593; opacity: 1;}
+
         .content {
             background-color: #f0f0f0; /* Light gray background for the content area */
             padding: 20px; /* Padding around the content */
             margin: 20px auto; /* Center the content with auto margins */
             max-width: 800px; /* Maximum width for the content area */
         }
-        </style>
-    <style>
         body {
             background-color: ghostwhite ; /* Light yellow background */
             color: #333; /* Dark text color */
@@ -103,6 +112,12 @@
         background-size: cover; }
         h1 {background-color: red;}
         section {background-color: brown}
+
+        #relative {position: relative;}
+        #absolute {position: absolute;
+        bottom: 0px;
+        right: 0px;
+        z-index: 0;}
 </style>
 </head>
 <body>
@@ -110,17 +125,18 @@
         <h1>Backgrounds and Text</h1>
         <p>This is a simple HTML page with a background color and text.</p>
         </main>
-        <section class="center-content">
+        <section class="center-content" id="relative">
             <div id="styling the div">
             <p>Ahhfbwhv fuergugrueningehvhjebwugehbeu9</p>
             <p>Ahhfbwhv fuergugrueningehvhjebwugehbeu9</p>
             <p>uyfgwuy4uo3gugggoigoigreigwigfgwefogew</p>
+            <p id="absolute">This is an absolute paragraph</p>
             </div>
         </section>
         <h1>LEBROOOOOOOOOOOOOOOOOOOOOOOOOOOONNNN!!!</h1>
 
-        <div class="relative">This div element has position: relative;
-            <div class="absolute">
+        <div class="reelative">This div element has position: relative;
+            <div class="absolutee">
                 <img src="https://ca-times.brightspotcdn.com/dims4/default/5d56e1b/2147483647/strip/true/crop/3000x3000+0+0/resize/2000x2000!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fe6%2F5f%2F0deb971e42c8b998886ebd0809bd%2F2.JPG" alt="Kobe Bryant" width="146" height="146">
             </div>
         </div>
